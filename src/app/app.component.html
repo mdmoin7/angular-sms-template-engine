@@ -1,0 +1,19 @@
+<div class="container mt-5 border rounded p-0">
+  <h1 class="bg-light text-center p-2">SMS TEMPLATE ENGINE</h1>
+  <div class="row p-3">
+    <div class="col-md-4">
+      <h3>Template</h3>
+      <textarea class="form-control" [formControl]="editorData"></textarea>
+    </div>
+    <div class="col-md-4">
+      <h3>Preview</h3>
+      <div class="preview bg-light rounded border p-2" [innerText]="templateText"></div>
+    </div>
+    <div class="col-md-4">
+      <h3>Fields Available</h3>
+      <div class="d-flex flex-wrap">
+      <button class="btn btn-sm btn-light m-2" *ngFor="let f of fieldsAvailable" (click)="copyField(f)" title="copy">{{f.key}}</button>
+      </div>
+    </div>
+  </div>
+</div>
